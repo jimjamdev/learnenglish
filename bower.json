@@ -1,0 +1,34 @@
+{
+  "name": "learnenglish",
+  "version": "1.0",
+  "authors": [
+    "Ian Jamieson <cogocreative@gmail.com>"
+  ],
+  "description": "Learn English responsive theme",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "learn",
+    "english"
+  ],
+  "license": "MIT",
+  "homepage": "www.ecenglish.com/learnenglish",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "material-design-iconic-font": "~1.1.1",
+    "owl-carousel2": "*",
+    "bootstrap-sass": "~3.3.4",
+    "sass-material-colors": "~0.0.5",
+    "susy": "~2.2.2",
+    "material-shadows": "~2.0.1",
+    "animate": "git://github.com/geoffgraham/animate.scss"
+  }
+}

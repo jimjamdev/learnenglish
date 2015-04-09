@@ -1,0 +1,38 @@
+// Generic table default
+
+.table {
+  thead {
+    tr {
+      th, th.active {
+        background-color: $red;
+        a {
+          color: $white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  ul.links {
+    @extend %reset-list;
+    li {
+      @extend %reset-list;
+      display: inline-block;
+    }
+  }
+}
+
+.table.lesson-index {
+  margin: 1em 0em;
+  .odd {
+    background-color: $gray-lighter;
+  }
+  .even {
+    background-color: darken($gray-lighter, 5%);
+  }
+}
+
+// hackity
+
+.table>tbody>tr.active>td, .table>tbody>tr.active>th, .table>tbody>tr>td.active, .table>tfoot>tr.active>td, .table>tfoot>tr.active>th, .table>tfoot>tr>td.active, .table>tfoot>tr>th.active, .table>thead>tr.active>td, .table>thead>tr.active>th, .table>thead>tr>td.active {
+  background-color: transparent;
+}

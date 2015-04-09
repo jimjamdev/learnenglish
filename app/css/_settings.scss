@@ -1,0 +1,8 @@
+$grid-columns: 12 !default;
+$grid-gutters: 0.5 !default;
+$default-border-radius: 5px;
+// Susy layouts
+$susy: (flow: ltr,
+        columns: $grid-columns,
+        gutters: $grid-gutters,
+        gutter-position: inside);

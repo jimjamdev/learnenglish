@@ -1,0 +1,132 @@
+.question {
+  @extend %clearfix;
+  position: relative;
+  background-color: #fff;
+  border-radius: $default-border-radius;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  header {
+    @extend %clearfix;
+    background: lighten($gray-lighter, 2%);
+    //background: linear-gradient(bottom, darken($gray-lighter, 5%) 0%, $gray-lighter 100%);
+    padding: 20px;
+    border-top-left-radius: $default-border-radius;
+    border-top-right-radius: $default-border-radius;
+    h2 {
+     // color: $white;
+    }
+  }
+  h2, h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 22px;
+    text-align: center;
+    @include medium {
+      font-size: 28px;
+      text-align: left;
+    }
+  }
+  &::before {
+    content: '';
+    background: url('/images/pin.svg') center center no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+
+    position: absolute;
+    top: -10px;
+    right: -7px;
+  }
+  article {
+    @include break;
+    @extend %clearfix;
+    padding: 20px;
+  }
+  &-actions {
+    //background-color: #004d40;
+    text-align: center;
+    @include medium {
+      text-align: left;
+      float: left;
+      width: 50%;
+    }
+  }
+  footer {
+    @extend %clearfix;
+    background-color: lighten($gray-lighter, 2%);
+    padding: 20px;
+    border-bottom-left-radius: $default-border-radius;
+    border-bottom-right-radius: $default-border-radius;
+  }
+  &-info {
+    //background-color: yellow;
+    text-align: center;
+    @include medium {
+      padding-top: 15px;
+      float: right;
+      width: 50%;
+    }
+  }
+  // Over-rides
+  .tags {
+    margin: 0 auto;
+    display: inline-block;
+  }
+  .rating {
+    @extend %clearfix;
+    @include medium {
+      float: right;
+      width: 100%;
+    }
+    li {
+      @include medium {
+        float: right;
+      }
+    }
+  }
+}
+
+.posted-by {
+  @extend %clearfix;
+  @include medium {
+    text-align: right;
+  }
+  font-style: italic;
+  font-size: 10px;
+  color: $gray;
+}
+
+// Serm all code styling
+
+#exerciseanswers {
+  @extend %reset-list;
+  li {
+    strong {
+      display: block;
+      background-color: $red;
+      color: $white;
+      padding: 10px;
+      border-radius: $default-border-radius;
+      font-weight: 300;
+    }
+    .mcanswers {
+        label {
+          display: block;
+          font-weight: 300;
+          margin-bottom:0;
+          padding: 10px;
+          background-color: $gray-lighter;
+          border-radius: $default-border-radius;
+          &:hover,&:focus {
+            background-color: $blue-light;
+          }
+          br {
+            display: none !important;
+          }
+          input {
+            margin-right: 10px;
+          }
+        }
+    }
+  }
+}

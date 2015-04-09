@@ -1,0 +1,44 @@
+
+
+@mixin card($color) {
+ background-color: $color;
+  color: $white;
+  margin: 20px 0px;
+  header {
+    display: table;
+    width: 100%;
+    padding: 20px;
+    background-color: darken($color, 5%);
+    height: 120px;
+    h1, h2, h3, h4 {
+      font-weight: 300;
+      color: $white;
+      margin:0;
+      display: table-cell;
+      vertical-align: bottom;
+    }
+  }
+  article {
+    padding: 20px;
+    p {
+      margin:0;
+    }
+  }
+  footer {
+    border-top: solid 1px darken($color, 5%);
+    padding: 10px 20px;
+    .btn {
+      background-color: transparent;
+      padding:10px 0px;
+      margin-right: 20px;
+      text-transform: uppercase;
+      color: $white;
+      border: 0px none;
+      &:hover,&:focus {
+        border: 0px none;
+        color: darken($color, 30%);
+      }
+    }
+  }
+
+}

@@ -1,0 +1,201 @@
+@import "base";
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  background-color: $white;
+  -webkit-backface-visibility: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+}
+
+.fadeInDown {
+  @include fadeInDown();
+}
+
+.title {
+  position: relative;
+  display: table;
+  padding: 60px 10px 20px 10px;
+  @include medium {
+    padding: 110px 10px 70px 10px;
+  }
+  width: 100%;
+  background: $blue url('/images/banner.png');
+  &__content {
+    display: table-cell;
+    vertical-align: middle;
+    color: $white;
+    text-align: center;
+    font-weight: 100;
+    h1, h2, h3, h4 {
+      color: $white;
+      font-weight: 300;
+    }
+    h1 {
+      @include fadeInDown();
+      @media (min-width: $screen-sm-min) {
+        font-size: 58px
+      }
+      @media (min-width: $screen-md-min) {
+        font-size: 68px
+      }
+    }
+    h2 {
+      @include fadeInDown($delay: .5s);
+    }
+    a {
+      color: $white;
+      text-decoration: underline;
+    }
+    .btn {
+      @extend .animated;
+      margin: 10px 0;
+      &:hover,&:focus {
+        @include tada();
+      }
+    }
+  }
+}
+
+.section {
+  @extend .clearfix;
+  @extend %default-background;
+}
+// Sections
+.section.categories {
+  padding-bottom: 30px;
+}
+.section.lesson-category {
+  position: relative;
+  background: $blue-light;
+}
+.section.daily-question {
+  position: relative;
+  background: $blue-light url('/images/banner2.png');
+  .table-cell {
+    padding-bottom: 50px;
+  }
+
+  .teacher-image {
+    position: relative;
+    & img {
+      display: none;
+      @include medium {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 25%;
+        height: 400px;
+      }
+    }
+  }
+  .question {
+    //background-color: $white;
+  }
+}
+
+.section.info {
+  background: $blue url('/images/banner3.png');
+  padding: 1em 0;
+  color: #fff;
+  h3 {
+    border-bottom: solid 1px lighten($blue, 20%);
+    padding-bottom: 15px;
+  }
+  img {
+    margin-bottom: 15px;
+  }
+  // Table
+  table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    tr {
+      display: table-row;
+      vertical-align: inherit;
+      border-color: inherit;
+    }
+    td {
+      padding: 3px;
+      line-height: 1.42857;
+      vertical-align: top;
+    }
+    a {
+      color: yellow;
+    }
+  }
+}
+
+// Cards
+
+.card--category-grammar {
+  @include card($green);
+}
+
+.card--category-vocab {
+  @include card($pink);
+}
+
+.card--category-listening {
+  @include card($blue);
+}
+
+.card--category-reading {
+   @include card($yellow);
+ }
+.card--category-phrases {
+  @include card($pink);
+}
+
+
+
+// Table layout
+.table-row {
+  display: block;
+  @include medium {
+    display: table;
+  }
+}
+.table-cell {
+  @include medium {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+  }
+}
+
+// Lessons Category
+.main-left {
+
+}
+
+.sidebar {
+  padding: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: $white;
+  border-radius: 5px;
+  color: $gray-light;
+  h4 {
+    color: $gray-darker;
+    font-weight: 400;
+  }
+  .side-box {
+    padding: 1em;
+  }
+}
+
+// Footer
+footer.global {
+  color: $white;
+  background-color: $green-dark;
+  padding: 10px 0px;
+}

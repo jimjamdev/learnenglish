@@ -1,0 +1,32 @@
+
+@mixin small {
+  @include susy-media($screen-sm-min) {
+    @content;
+  }
+}
+
+
+
+@mixin small-only {
+  @include susy-media($screen-sm-min) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @include susy-media($screen-md-min) {
+    @content;
+  }
+  .lt-ie9 & {
+    @content;
+    // We want to show this for the older IE8 browser that doesnt support media queries. This way we can get rid of respond.js and still give older IE users a fast and pleasant experience.
+    // We can also use the .lt-ieX tags to target older version of IE without Modernizr. Thats a saving of over 100k.
+  }
+}
+
+@mixin large {
+  @include susy-media($screen-lg-min) {
+    @content;
+  }
+}
+

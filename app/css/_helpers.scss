@@ -1,0 +1,37 @@
+.animated {
+  transform: translate3d(0,0,0); // Fix for chrome animation rendering
+}
+%clearfix,
+.clearfix {
+  zoom: 1;
+  &:before, &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+%reset-list {
+  padding:0;margin:0;list-style:none;
+}
+
+%default-background {
+  background-size: cover;
+}
+
+
+.scroll-touch {
+  min-width: 420px;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+%no-touch-action {
+  -ms-touch-action: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}

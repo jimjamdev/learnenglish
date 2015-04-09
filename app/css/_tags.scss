@@ -1,0 +1,28 @@
+// Tags
+.tags {
+  @extend .clearfix;
+  padding:0;margin:0;list-style:none;
+  li {
+    padding:0;margin:0;list-style:none;
+    float: left;
+    margin-right: 5px;
+  }
+  a {
+    @extend .animated;
+    @extend %no-touch-action;
+    display: inline-block;
+    background-color: $blue;
+    background: linear-gradient(top, lighten($blue,10%), darken($blue,1%));
+    color: $white;
+    font-size: 11px;
+    text-decoration: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    transition: background 0.3s ease-in-out;
+    &:hover,&:focus,&:active {
+      text-decoration: none;
+      background-color: lighten($pink, 0%);
+      @include swing();
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.modal-content {
+  border-radius: 0;
+  @include z-depth(1);
+}
+
+.modal-header {
+  background-color: $primary-color;
+  border-bottom: 1px solid darken($primary-color, 5%);
+  color: $white;
+  .close {
+    color: $white;
+    text-shadow: none;
+    opacity: 1;
+    font-size: 30px;
+    font-weight: 100;
+  }
+}
+.modal-footer {
+
+}
